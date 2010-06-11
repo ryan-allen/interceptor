@@ -1,5 +1,7 @@
 # Interceptor
 
+Mad Max had one, and he was freaking awesome.
+
 ## Overview:
 
 Interceptor allows you to wrap other objects, and intercept method calls, without changing the target objects code, or performing any hairy metaprogramming. You may use this library to perform these kinds of tasks:
@@ -34,3 +36,19 @@ Let's say as a Ruby programmer you picked up some Lua and decided that Lua's ide
     even_luckier_numbers[3] # => 2012
     
 The first two arguments to the block is a reference to the object passed to the Interceptor (in this case, a reference to ``lucky_numbers``), the second is a symbol of the method call (in this case, it is ``:[]``), and the remaining arguments are the arguments passed to the method call (in this case, ``1`` and ``2`` and ``3``).
+
+## Patches:
+
+What the hell is a patch?
+
+## RubyGem?
+
+Nope, how do you make those? I asked this guy called John and he told me to 'google it' or something.
+
+## Mad Max:
+
+Is freaking awesome, [here's proof](http://www.youtube.com/watch?v=nLCmcV4gC_0).
+
+## Other Questions?
+
+If you have any questions, shoot me a message on the github-o-sphere. I likely have no idea what you're talking about as I have no idea what I'm talking about most of the time.
