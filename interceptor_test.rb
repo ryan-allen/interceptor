@@ -30,4 +30,9 @@ class InterceptorTest < Test::Unit::TestCase
     @wrapper.intercept(:[]) { |r, t, *a| a }
     assert_equal [0], @wrapper[0]
   end
+
+  def test_that_the_block_is_like_totally_a_closure_and_shit!
+    @wrapper.intercept(:[]) { |r, t, *a| self.class }
+    assert_equal InterceptorTest, @wrapper[0]
+  end
 end
