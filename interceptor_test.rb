@@ -35,4 +35,11 @@ class InterceptorTest < Test::Unit::TestCase
     @wrapper.intercept(:[]) { |r, t, *a| self.class }
     assert_equal InterceptorTest, @wrapper[0]
   end
+
+  def test_can_wrap_more_than_one_method_in_a_single_call_and_can_differentiate_the_target_in_the_interception_phew_that_is_a_mouthful
+    @wrapper.intercept(:[], :sort, :reverse) { |r, t, *a| t }
+    assert_equal :[], @wrapper[0]
+    assert_equal :sort, @wrapper.sort
+    assert_equal :reverse, @wrapper.reverse
+  end
 end

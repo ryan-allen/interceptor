@@ -4,8 +4,8 @@ class Interceptor
     @interceptions = {}
   end
 
-  def intercept(target, &block)
-    @interceptions[target] = block
+  def intercept(*targets, &block)
+    targets.each { |target| @interceptions[target] = block }
   end
 
   def method_missing(target, *args, &block)
