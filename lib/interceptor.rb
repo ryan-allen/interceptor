@@ -1,4 +1,6 @@
 class Interceptor
+  VERSION = '0.0.1'
+
   def initialize(receiver)
     @receiver = receiver
     @interceptions = {}
